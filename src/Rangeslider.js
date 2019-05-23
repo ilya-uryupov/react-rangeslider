@@ -363,17 +363,19 @@ class Slider extends Component {
           style={handleStyle}
           tabIndex={0}
         >
-          {showTooltip
-            ? <div
-              ref={st => {
-                this.tooltip = st
-              }}
-              className='rangeslider__handle-tooltip'
-              >
-              <span>{this.handleFormat(value)}</span>
-            </div>
-            : null}
-          <div className='rangeslider__handle-label'>{handleLabel}</div>
+          <div className='rangeslider_output'>
+            {showTooltip
+             ? <div
+               ref={st => {
+                 this.tooltip = st
+               }}
+               className='rangeslider__handle-tooltip'
+             >
+               <span>{this.handleFormat(value)}</span>
+             </div>
+             : null}
+            <div className='rangeslider__handle-label'>{handleLabel}</div>
+          </div>
         </div>
         {labels ? this.renderLabels(labelItems) : null}
       </div>
