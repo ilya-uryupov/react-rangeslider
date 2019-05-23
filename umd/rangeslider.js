@@ -506,24 +506,28 @@ return /******/ (function(modules) { // webpackBootstrap
 	            style: handleStyle,
 	            tabIndex: 0
 	          },
-	          showTooltip ? _react2.default.createElement(
-	            'div',
-	            {
-	              ref: function ref(st) {
-	                _this2.tooltip = st;
-	              },
-	              className: 'rangeslider__handle-tooltip'
-	            },
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              this.handleFormat(value)
-	            )
-	          ) : null,
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'rangeslider__handle-label' },
-	            handleLabel
+	            { className: 'rangeslider_output' },
+	            showTooltip ? _react2.default.createElement(
+	              'div',
+	              {
+	                ref: function ref(st) {
+	                  _this2.tooltip = st;
+	                },
+	                className: 'rangeslider__handle-tooltip'
+	              },
+	              _react2.default.createElement(
+	                'span',
+	                null,
+	                this.handleFormat(value)
+	              )
+	            ) : null,
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'rangeslider__handle-label' },
+	              handleLabel
+	            )
 	          )
 	        ),
 	        labels ? this.renderLabels(labelItems) : null
